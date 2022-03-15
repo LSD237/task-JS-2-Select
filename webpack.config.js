@@ -37,7 +37,11 @@ const sourceMap = () => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: './index.js',
+  // entry: './index.js',
+  entry: {
+    index: ['./index.js'],
+    second: ['./plugins/secondPage.js']
+  },
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist'),
@@ -58,10 +62,25 @@ module.exports = {
   },
   devtool: sourceMap(),
   plugins: [
+    // new HTMLWebpackPlugin({
+    //   // template: './index.html'
+    //   filename: 'index.html',
+    //   template: './pug/pages/index.pug'
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: 'second.html',
+    //   template: './pug/pages/second.pug'
+    // }),
     new HTMLWebpackPlugin({
       // template: './index.html'
       filename: 'index.html',
-      template: './pug/pages/index.pug'
+      template: './pug/pages/index.pug',
+      chunks: ['index']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'second.html',
+      template: './pug/pages/second.pug',
+      chunks: ['second']
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
