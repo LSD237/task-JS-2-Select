@@ -35,8 +35,8 @@ export class Select {
     //id течущего выбраннного элемента
     this.selectedId = options.selectedId
 
-    this.#render()
-    this.#setup()
+    this.#render() //добавление/отображение html шаблона
+    this.#setup() //настроить
   }
   //работа с шаблоном
   #render() {
@@ -70,7 +70,7 @@ export class Select {
   get isOpen() {
     return this.$el.classList.contains('open')
   }
-  // ищет и возвращает нужный элемент в data(списке элементов)
+  // здесь хранится актуальный элемент (из data массива)
   get current() {
     return this.options.data.find(item => item.id === this.selectedId)
   }
@@ -97,8 +97,8 @@ export class Select {
 
   open() {
     this.$el.classList.add('open')
-    this.$arrow.classList.remove('fa-chevron-down')
-    this.$arrow.classList.add('fa-chevron-up')
+    this.$arrow.classList.remove('fa-chevron-down') //удаляет датаатрибут (стрелка вверх)
+    this.$arrow.classList.add('fa-chevron-up')  //добавляет датаатрибут (стрелка вниз)
   }
 
   close() {

@@ -40,7 +40,8 @@ module.exports = {
   // entry: './index.js',
   entry: {
     index: ['./index.js'],
-    second: ['./plugins/secondPage.js']
+    second: ['./plugins/secondPage.js'],
+    thirth: ['./plugins/thirthPage.js']
   },
   output: {
     filename: filename('js'),
@@ -67,10 +68,6 @@ module.exports = {
     //   filename: 'index.html',
     //   template: './pug/pages/index.pug'
     // }),
-    // new HTMLWebpackPlugin({
-    //   filename: 'second.html',
-    //   template: './pug/pages/second.pug'
-    // }),
     new HTMLWebpackPlugin({
       // template: './index.html'
       filename: 'index.html',
@@ -81,6 +78,11 @@ module.exports = {
       filename: 'second.html',
       template: './pug/pages/second.pug',
       chunks: ['second']
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'thirth.html',
+      template: './pug/pages/thirth.pug',
+      chunks: ['thirth']
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
