@@ -1,0 +1,26 @@
+body {
+  background-color: #F67280;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.app .wrapp .select__input {
+  border-color: black;
+}
+
+.app .wrapp .select__dropdown {
+  border-color: black;
+}
+
+.app .wrapp .select__item {
+  border-bottom: 1px solid black;
+}
+
+.app .wrapp .select__item:hover {
+  background-color: #F8B195;
+}
+
+.app .wrapp .select__item.selected {
+  background-color: #C06C84;
+}

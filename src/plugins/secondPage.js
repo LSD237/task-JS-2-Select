@@ -1,4 +1,5 @@
 import '@styles/scss/styles.scss'
+import '@styles/scss/second.scss'
 import { Select } from './select'
 
 const select2 = new Select('#select2', {

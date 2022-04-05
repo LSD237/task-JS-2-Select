@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(27, 27, 27);
+  color: wheat;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.app .wrapp .select__item:hover {
+  // background-color: rgb(71, 69, 52);
+  background-color: #6D6554;
+}
+
+.app .wrapp .select__item.selected {
+  // background-color: rgb(119, 101, 0);
+  background-color: #524C41;
+}

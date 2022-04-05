@@ -1,4 +1,5 @@
 import '@styles/scss/styles.scss'
+import '@styles/scss/thirth.scss'
 import { SecondSelect } from './copySelect'
 
 const select3 = new SecondSelect('#select3', {
